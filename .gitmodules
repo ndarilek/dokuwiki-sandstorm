@@ -1,0 +1,3 @@
+[submodule "dokuwiki"]
+	path = dokuwiki
+	url = git://github.com/splitbrain/dokuwiki.git
