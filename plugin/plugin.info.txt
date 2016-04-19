@@ -1,0 +1,7 @@
+base   sandstorm
+author Nolan Darilek
+email  nolan@thewordnerd.info
+date   2015-11-16
+name   sandstorm plugin
+desc   Modifications needed to run in Sandstorm
+url    https://dev.thewordnerd.info/nolan/dokuwiki-sandstorm

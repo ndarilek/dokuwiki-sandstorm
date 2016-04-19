@@ -15,15 +15,33 @@ mkdir -p /var/run
 /usr/sbin/php5-fpm --nodaemonize --fpm-config /etc/php5/fpm/php-fpm.conf &
 # Wait until php have bound its socket, indicating readiness
 while [ ! -e /var/run/php5-fpm.sock ] ; do
-    echo "waiting for php5-fpm to be available at /var/run/php5-fpm.sock"
-    sleep .2
+  echo "waiting for php5-fpm to be available at /var/run/php5-fpm.sock"
+  sleep .2
 done
 
-rsync -a /opt/app/dokuwiki/ /var/www
+mkdir -p /var/lib/dokuwiki/lib/plugins/sandstorm
 
-if [ ! -f /var/www/conf/local.php ]; then
-  cp /opt/app/local.php /var/www/conf
+if [ ! -e /var/lib/dokuwiki/conf/local.php ]; then
+  echo Adding new configuration.
+  rsync -a /opt/app/dokuwiki/conf.orig/ /var/lib/dokuwiki/conf
+  cp /opt/app/local.php /var/lib/dokuwiki/conf
 fi
+
+if [ ! -e /var/lib/dokuwiki/data ]; then
+  echo Adding data.
+  rsync -a /opt/app/dokuwiki/data.orig/ /var/lib/dokuwiki/data
+fi
+
+rsync -a /opt/app/dokuwiki/lib/plugins.orig/ /var/lib/dokuwiki/lib/plugins
+rsync -a /opt/app/plugin/ /var/lib/dokuwiki/lib/plugins/sandstorm
+
+if [ ! -e /var/lib/dokuwiki/lib/tpl ]; then
+  echo Adding templates.
+  rsync -a /opt/app/dokuwiki/lib/tpl.orig/ /var/lib/dokuwiki/lib/tpl
+fi
+
+cd /var/lib/dokuwiki
+grep -Ev '^($|#)' /opt/app/dokuwiki/data.orig/deleted.files | xargs -n 1 rm -vrf
 
 # Start nginx.
 /usr/sbin/nginx -g "daemon off;"

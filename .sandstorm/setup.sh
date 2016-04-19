@@ -17,27 +17,30 @@ server {
     client_max_body_size 0;
 
     server_name localhost;
-    root /var/www;
+    root /opt/app/dokuwiki;
+    index doku.php;
+    location ~ /(data/|conf/|bin/|inc/|install.php) { deny all; }
+    location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
+        expires 31536000s;
+        add_header Pragma "public";
+        add_header Cache-Control "max-age=31536000, public, must-revalidate, proxy-revalidate";
+        log_not_found off;
+    }
     location / {
-        index doku.php;
         try_files \$uri \$uri/ @dokuwiki;
     }
-    location ^~ /lib/ {
-        expires 30d;
-    }
-    location ^~ /conf/ { return 403; }
-    location ^~ /data/ { return 403; }
     location @dokuwiki {
         rewrite ^/_media/(.*) /lib/exe/fetch.php?media=\$1 last;
         rewrite ^/_detail/(.*) /lib/exe/detail.php?media=\$1 last;
         rewrite ^/_export/([^/]+)/(.*) /doku.php?do=export_\$1&id=\$2 last;
-        rewrite ^/(.*) /doku.php?id=\$1 last;
+        rewrite ^/(.*) /doku.php?id=\$1&\$args last;
     }
     location ~ \\.php\$ {
-        fastcgi_pass unix:/var/run/php5-fpm.sock;
-        fastcgi_split_path_info ^(.+\\.php)(/.+)\$;
-        fastcgi_param  SCRIPT_FILENAME \$document_root\$fastcgi_script_name;
+        if (!-f \$request_filename) { return 404; }
         include fastcgi_params;
+        fastcgi_pass unix:/var/run/php5-fpm.sock;
+        fastcgi_param REDIRECT_STATUS 200;
+        fastcgi_param  SCRIPT_FILENAME \$document_root\$fastcgi_script_name;
     }
 }
 EOF
@@ -83,3 +86,5 @@ sed --in-place='' \
         --expression 's/^fastcgi_param *HTTPS.*$/fastcgi_param  HTTPS               \$fe_https if_not_empty;/' \
         /etc/nginx/fastcgi_params
 
+mkdir -p /var/lib/dokuwiki/{conf,data,lib/plugins,lib/tpl}
+chown -R vagrant.vagrant /var/lib/dokuwiki

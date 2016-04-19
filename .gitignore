@@ -1,2 +1,5 @@
 .vagrant
 *.spk
+conf
+plugins
+tpl
