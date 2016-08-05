@@ -11,7 +11,6 @@ if(!defined('DOKU_INC')) die();
 
 class auth_plugin_sandstorm extends DokuWiki_Auth_Plugin {
 
-
     /**
      * Constructor.
      */
@@ -19,16 +18,16 @@ class auth_plugin_sandstorm extends DokuWiki_Auth_Plugin {
         parent::__construct(); // for compatibility
 
         // FIXME set capabilities accordingly
-        //$this->cando['addUser']     = false; // can Users be created?
-        //$this->cando['delUser']     = false; // can Users be deleted?
-        //$this->cando['modLogin']    = false; // can login names be changed?
-        //$this->cando['modPass']     = false; // can passwords be changed?
-        //$this->cando['modName']     = false; // can real names be changed?
-        //$this->cando['modMail']     = false; // can emails be changed?
-        //$this->cando['modGroups']   = false; // can groups be changed?
-        //$this->cando['getUsers']    = false; // can a (filtered) list of users be retrieved?
-        //$this->cando['getUserCount']= false; // can the number of users be retrieved?
-        //$this->cando['getGroups']   = false; // can a list of available groups be retrieved?
+        $this->cando['addUser']     = false; // can Users be created?
+        $this->cando['delUser']     = false; // can Users be deleted?
+        $this->cando['modLogin']    = false; // can login names be changed?
+        $this->cando['modPass']     = false; // can passwords be changed?
+        $this->cando['modName']     = false; // can real names be changed?
+        $this->cando['modMail']     = false; // can emails be changed?
+        $this->cando['modGroups']   = false; // can groups be changed?
+        $this->cando['getUsers']    = false; // can a (filtered) list of users be retrieved?
+        $this->cando['getUserCount']= false; // can the number of users be retrieved?
+        $this->cando['getGroups']   = false; // can a list of available groups be retrieved?
         $this->cando['external']    = true; // does the module do external auth checking?
         $this->cando['logout']      = false; // can the user logout again? (eg. not possible with HTTP auth)
 
@@ -48,14 +47,36 @@ class auth_plugin_sandstorm extends DokuWiki_Auth_Plugin {
         global $USERINFO;
         global $conf;
         $sticky = true;
-        $USERINFO['name'] = rawurldecode($_SERVER['HTTP_X_SANDSTORM_USERNAME']);
+        $name = rawurldecode($_SERVER['HTTP_X_SANDSTORM_USERNAME']);
+        $USERINFO['name'] = $name;
         $USERINFO['mail'] = 'user@example.com';
         $USERINFO['grps'] = str_getcsv($_SERVER['HTTP_X_SANDSTORM_PERMISSIONS']);
-        $_SERVER['REMOTE_USER'] = $_SERVER['HTTP_X_SANDSTORM_USER_ID'];
+        $userid = $_SERVER['HTTP_X_SANDSTORM_USER_ID'];
+        $_SERVER['REMOTE_USER'] = $userid;
         $_SESSION[DOKU_COOKIE]['auth']['user'] = $USERINFO['name'];
         $_SESSION[DOKU_COOKIE]['auth']['pass'] = $pass;
         $_SESSION[DOKU_COOKIE]['auth']['info'] = $USERINFO;
+        if($userid != null) {
+            $db = new LevelDB("/var/users");
+            $db->put($userid, $name);
+            $db->close();
+        }
         return true;
+    }
+
+    public function getUserdata($user, $requireGroups=true) {
+        $db = new LevelDB("/var/users");
+        $user = $db->get($user);
+        $db->close();
+        if(isset($user)) {
+            return [
+                'name' => $user,
+                'mail' => 'user@example.com',
+                'grps' => []
+            ];
+        } else {
+            return false;
+        }
     }
 
 }
