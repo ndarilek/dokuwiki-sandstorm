@@ -15,8 +15,10 @@ fi
 rsync -a /opt/app/plugin/ /opt/app/dokuwiki/lib/plugins/sandstorm/
 
 for p in /opt/app/dokuwiki/{conf,data,lib/plugins,lib/tpl}; do
-  if [ -e $p ]; then
+  if [ ! -e $p.orig ]; then
     mv $p $p.orig
+  fi
+  if [ -e $p ]; then
     rm -rf $p
   fi
 done
