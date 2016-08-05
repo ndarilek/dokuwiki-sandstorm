@@ -51,6 +51,9 @@ server {
         fastcgi_param REDIRECT_STATUS 200;
         fastcgi_param  SCRIPT_FILENAME \$document_root\$fastcgi_script_name;
     }
+
+    gzip off;
+
 }
 EOF
 ln -s /etc/nginx/sites-available/sandstorm-php /etc/nginx/sites-enabled/sandstorm-php
