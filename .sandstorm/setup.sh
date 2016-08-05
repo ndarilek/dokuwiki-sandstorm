@@ -4,7 +4,16 @@ set -euo pipefail
 
 export DEBIAN_FRONTEND=noninteractive
 apt-get update
-apt-get install -y nginx php5-fpm php5-cli php5-curl git php5-dev
+apt-get install -y nginx php5-fpm php5-cli php5-curl git php5-dev libleveldb-dev
+cd /usr/local/src
+git clone https://github.com/reeze/php-leveldb.git
+cd php-leveldb
+phpize
+./configure
+make
+make install
+cp /opt/app/leveldb.ini /etc/php5/mods-available
+php5enmod leveldb
 unlink /etc/nginx/sites-enabled/default
 cat > /etc/nginx/sites-available/sandstorm-php <<EOF
 server {
