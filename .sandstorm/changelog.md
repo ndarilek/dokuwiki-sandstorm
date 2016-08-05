@@ -1,3 +1,8 @@
+# V3 (2016-08-05)
+
+ * Enhanced Sandstorm authentication plugin to preserve and return display names to DokuWiki
+ * Now correctly updates Sandstorm path and page title
+
 # V2 (2016-04-18)
 
  * Now displays usernames rather than UUIDs in topbar and recent changes feeds
