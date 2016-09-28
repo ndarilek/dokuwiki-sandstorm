@@ -29,12 +29,7 @@ server {
     root /opt/app/dokuwiki;
     index doku.php;
     location ~ /(data/|conf/|bin/|inc/|install.php) { deny all; }
-    location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
-        expires 31536000s;
-        add_header Pragma "public";
-        add_header Cache-Control "max-age=31536000, public, must-revalidate, proxy-revalidate";
-        log_not_found off;
-    }
+    
     location / {
         try_files \$uri \$uri/ @dokuwiki;
     }
