@@ -1,9 +1,10 @@
-# V3 (2016-08-05)
+# V3 (2016-10-13)
 
  * Enhanced Sandstorm authentication plugin to preserve and return display names to DokuWiki
  * Now correctly updates Sandstorm path and page title
  * Disable gzip compression so images and other non-text content works
  * Update repository URL
+ * Fixed issue that prevented images from displaying
 
 # V2 (2016-04-18)
 
