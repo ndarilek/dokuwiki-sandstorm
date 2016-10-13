@@ -1,3 +1,8 @@
+# V4 (2016-10-14)
+
+ * Refactor to service-config style for easier development
+ * Upgrade DokuWiki to 2016-06-26a
+
 # V3 (2016-10-13)
 
  * Enhanced Sandstorm authentication plugin to preserve and return display names to DokuWiki
