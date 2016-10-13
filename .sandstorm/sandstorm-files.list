@@ -22,13 +22,10 @@ etc/ld.so.cache
 etc/localtime
 etc/magic
 etc/nginx/conf.d
-etc/nginx/conf.d/50sandstorm.conf
 etc/nginx/fastcgi_params
 etc/nginx/mime.types
 etc/nginx/nginx.conf
-etc/nginx/sites-available/sandstorm-php
 etc/nginx/sites-enabled
-etc/nginx/sites-enabled/sandstorm-php
 etc/php5/fpm/conf.d
 etc/php5/fpm/conf.d/05-opcache.ini
 etc/php5/fpm/conf.d/10-pdo.ini
@@ -119,6 +116,9 @@ lib64/ld-linux-x86-64.so.2
 opt
 opt/app
 opt/app/.sandstorm/launcher.sh
+opt/app/.sandstorm/service-config/fastcgi_params
+opt/app/.sandstorm/service-config/mime.types
+opt/app/.sandstorm/service-config/nginx.conf
 opt/app/dokuwiki
 opt/app/dokuwiki/.editorconfig
 opt/app/dokuwiki/.git

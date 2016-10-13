@@ -44,4 +44,4 @@ cd /var/lib/dokuwiki
 grep -Ev '^($|#)' /opt/app/dokuwiki/data.orig/deleted.files | xargs -n 1 rm -vrf
 
 # Start nginx.
-/usr/sbin/nginx -g "daemon off;"
+/usr/sbin/nginx -c /opt/app/.sandstorm/service-config/nginx.conf -g "daemon off;"
