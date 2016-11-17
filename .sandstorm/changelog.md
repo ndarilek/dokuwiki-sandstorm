@@ -1,3 +1,7 @@
+# 2016-06-26a-sandstorm5 (2016-11-17)
+
+ * Create default @user ACL rule
+
 # V2016-06-26a-sandstorm4 (2016-10-14)
 
  * Refactor to service-config style for easier development

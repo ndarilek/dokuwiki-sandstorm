@@ -43,5 +43,7 @@ fi
 cd /var/lib/dokuwiki
 grep -Ev '^($|#)' /opt/app/dokuwiki/data.orig/deleted.files | xargs -n 1 rm -vrf
 
+cp /opt/app/acl.auth.php /var/lib/dokuwiki/conf
+
 # Start nginx.
 /usr/sbin/nginx -c /opt/app/.sandstorm/service-config/nginx.conf -g "daemon off;"
