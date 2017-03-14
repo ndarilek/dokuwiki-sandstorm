@@ -26,19 +26,23 @@ if [ ! -e /var/lib/dokuwiki/conf/local.php ]; then
   rsync -a /opt/app/dokuwiki/conf.orig/ /var/lib/dokuwiki/conf
   cp /opt/app/local.php /var/lib/dokuwiki/conf
 fi
+rm -f /var/lib/dokuwiki/conf/conf
 
 if [ ! -e /var/lib/dokuwiki/data ]; then
   echo Adding data.
   rsync -a /opt/app/dokuwiki/data.orig/ /var/lib/dokuwiki/data
 fi
+rm -f /var/lib/dokuwiki/data/data
 
 rsync -a /opt/app/dokuwiki/lib/plugins.orig/ /var/lib/dokuwiki/lib/plugins
+rm -f /var/lib/dokuwiki/lib/plugins/plugins
 rsync -a /opt/app/plugin/ /var/lib/dokuwiki/lib/plugins/sandstorm
 
 if [ ! -e /var/lib/dokuwiki/lib/tpl ]; then
   echo Adding templates.
   rsync -a /opt/app/dokuwiki/lib/tpl.orig/ /var/lib/dokuwiki/lib/tpl
 fi
+rm -f /var/lib/dokuwiki/lib/tpl/tpl
 
 cd /var/lib/dokuwiki
 grep -Ev '^($|#)' /opt/app/dokuwiki/data.orig/deleted.files | xargs -n 1 rm -vrf
