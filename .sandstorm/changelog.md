@@ -1,5 +1,6 @@
-# 2016-06-26a-sandstorm6 (2017-03-14)
+# 2017-02-19b-sandstorm6 (2017-03-14)
 
+ * Upgrade DokuWiki
  * Now cleans up cached content older than 30 days, as well as removing stale locks and other useless data
 
 # 2016-06-26a-sandstorm5 (2017-03-14)
