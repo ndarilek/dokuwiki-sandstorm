@@ -5284,6 +5284,7 @@ sandstorm-http-bridge
 sandstorm-http-bridge-config
 sandstorm-manifest
 usr/bin/file
+usr/bin/find
 usr/bin/id
 usr/bin/rsync
 usr/bin/touch

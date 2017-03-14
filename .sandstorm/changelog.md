@@ -1,6 +1,11 @@
-# 2016-06-26a-sandstorm5 (2016-11-17)
+# 2016-06-26a-sandstorm6 (2017-03-14)
+
+ * Now cleans up cached content older than 30 days, as well as removing stale locks and other useless data
+
+# 2016-06-26a-sandstorm5 (2017-03-14)
 
  * Create default @user ACL rule
+ * Fix issue where recursive symlinks broke previous grains
 
 # V2016-06-26a-sandstorm4 (2016-10-14)
 
