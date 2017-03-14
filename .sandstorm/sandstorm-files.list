@@ -483,10 +483,7 @@ opt/app/dokuwiki/inc/Mailer.class.php
 opt/app/dokuwiki/inc/PassHash.class.php
 opt/app/dokuwiki/inc/RemoteAPICore.php
 opt/app/dokuwiki/inc/SafeFN.class.php
-opt/app/dokuwiki/inc/SimplePie.php
 opt/app/dokuwiki/inc/Sitemapper.php
-opt/app/dokuwiki/inc/Tar.class.php
-opt/app/dokuwiki/inc/ZipLib.class.php
 opt/app/dokuwiki/inc/actions.php
 opt/app/dokuwiki/inc/auth.php
 opt/app/dokuwiki/inc/blowfish.php
@@ -2561,14 +2558,6 @@ opt/app/dokuwiki/inc/parser/renderer.php
 opt/app/dokuwiki/inc/parser/xhtml.php
 opt/app/dokuwiki/inc/parser/xhtmlsummary.php
 opt/app/dokuwiki/inc/parserutils.php
-opt/app/dokuwiki/inc/phpseclib
-opt/app/dokuwiki/inc/phpseclib/Crypt_AES.php
-opt/app/dokuwiki/inc/phpseclib/Crypt_Base.php
-opt/app/dokuwiki/inc/phpseclib/Crypt_Hash.php
-opt/app/dokuwiki/inc/phpseclib/Crypt_Rijndael.php
-opt/app/dokuwiki/inc/phpseclib/LICENSE
-opt/app/dokuwiki/inc/phpseclib/Math_BigInteger.php
-opt/app/dokuwiki/inc/phpseclib/update.sh
 opt/app/dokuwiki/inc/plugin.php
 opt/app/dokuwiki/inc/plugincontroller.class.php
 opt/app/dokuwiki/inc/pluginutils.php
@@ -2589,6 +2578,7 @@ opt/app/dokuwiki/lib/exe/detail.php
 opt/app/dokuwiki/lib/exe/fetch.php
 opt/app/dokuwiki/lib/exe/index.html
 opt/app/dokuwiki/lib/exe/indexer.php
+opt/app/dokuwiki/lib/exe/jquery.php
 opt/app/dokuwiki/lib/exe/js.php
 opt/app/dokuwiki/lib/exe/mediamanager.php
 opt/app/dokuwiki/lib/exe/opensearch.php
@@ -2898,6 +2888,7 @@ opt/app/dokuwiki/lib/plugins.orig
 opt/app/dokuwiki/lib/plugins.orig/acl
 opt/app/dokuwiki/lib/plugins.orig/acl/action.php
 opt/app/dokuwiki/lib/plugins.orig/acl/admin.php
+opt/app/dokuwiki/lib/plugins.orig/acl/admin.svg
 opt/app/dokuwiki/lib/plugins.orig/acl/lang
 opt/app/dokuwiki/lib/plugins.orig/acl/lang/af
 opt/app/dokuwiki/lib/plugins.orig/acl/lang/af/lang.php
@@ -3099,6 +3090,7 @@ opt/app/dokuwiki/lib/plugins.orig/authad/lang/bg/lang.php
 opt/app/dokuwiki/lib/plugins.orig/authad/lang/bg/settings.php
 opt/app/dokuwiki/lib/plugins.orig/authad/lang/ca
 opt/app/dokuwiki/lib/plugins.orig/authad/lang/ca/lang.php
+opt/app/dokuwiki/lib/plugins.orig/authad/lang/ca/settings.php
 opt/app/dokuwiki/lib/plugins.orig/authad/lang/cs
 opt/app/dokuwiki/lib/plugins.orig/authad/lang/cs/lang.php
 opt/app/dokuwiki/lib/plugins.orig/authad/lang/cs/settings.php
@@ -3223,6 +3215,7 @@ opt/app/dokuwiki/lib/plugins.orig/authldap/lang/da/lang.php
 opt/app/dokuwiki/lib/plugins.orig/authldap/lang/da/settings.php
 opt/app/dokuwiki/lib/plugins.orig/authldap/lang/de
 opt/app/dokuwiki/lib/plugins.orig/authldap/lang/de-informal
+opt/app/dokuwiki/lib/plugins.orig/authldap/lang/de-informal/lang.php
 opt/app/dokuwiki/lib/plugins.orig/authldap/lang/de-informal/settings.php
 opt/app/dokuwiki/lib/plugins.orig/authldap/lang/de/lang.php
 opt/app/dokuwiki/lib/plugins.orig/authldap/lang/de/settings.php
@@ -3267,6 +3260,7 @@ opt/app/dokuwiki/lib/plugins.orig/authldap/lang/nl
 opt/app/dokuwiki/lib/plugins.orig/authldap/lang/nl/lang.php
 opt/app/dokuwiki/lib/plugins.orig/authldap/lang/nl/settings.php
 opt/app/dokuwiki/lib/plugins.orig/authldap/lang/no
+opt/app/dokuwiki/lib/plugins.orig/authldap/lang/no/lang.php
 opt/app/dokuwiki/lib/plugins.orig/authldap/lang/no/settings.php
 opt/app/dokuwiki/lib/plugins.orig/authldap/lang/pl
 opt/app/dokuwiki/lib/plugins.orig/authldap/lang/pl/settings.php
@@ -3313,6 +3307,7 @@ opt/app/dokuwiki/lib/plugins.orig/authmysql/lang/da/lang.php
 opt/app/dokuwiki/lib/plugins.orig/authmysql/lang/da/settings.php
 opt/app/dokuwiki/lib/plugins.orig/authmysql/lang/de
 opt/app/dokuwiki/lib/plugins.orig/authmysql/lang/de-informal
+opt/app/dokuwiki/lib/plugins.orig/authmysql/lang/de-informal/lang.php
 opt/app/dokuwiki/lib/plugins.orig/authmysql/lang/de-informal/settings.php
 opt/app/dokuwiki/lib/plugins.orig/authmysql/lang/de/lang.php
 opt/app/dokuwiki/lib/plugins.orig/authmysql/lang/de/settings.php
@@ -3355,6 +3350,7 @@ opt/app/dokuwiki/lib/plugins.orig/authmysql/lang/nl
 opt/app/dokuwiki/lib/plugins.orig/authmysql/lang/nl/lang.php
 opt/app/dokuwiki/lib/plugins.orig/authmysql/lang/nl/settings.php
 opt/app/dokuwiki/lib/plugins.orig/authmysql/lang/no
+opt/app/dokuwiki/lib/plugins.orig/authmysql/lang/no/lang.php
 opt/app/dokuwiki/lib/plugins.orig/authmysql/lang/no/settings.php
 opt/app/dokuwiki/lib/plugins.orig/authmysql/lang/pl
 opt/app/dokuwiki/lib/plugins.orig/authmysql/lang/pl/settings.php
@@ -3390,6 +3386,8 @@ opt/app/dokuwiki/lib/plugins.orig/authpdo/_test/mysql
 opt/app/dokuwiki/lib/plugins.orig/authpdo/_test/mysql.test.php
 opt/app/dokuwiki/lib/plugins.orig/authpdo/_test/mysql/fluxbb.php
 opt/app/dokuwiki/lib/plugins.orig/authpdo/_test/mysql/fluxbb.sql
+opt/app/dokuwiki/lib/plugins.orig/authpdo/_test/mysql/mybb.php
+opt/app/dokuwiki/lib/plugins.orig/authpdo/_test/mysql/mybb.sql
 opt/app/dokuwiki/lib/plugins.orig/authpdo/_test/mysql/wordpress.php
 opt/app/dokuwiki/lib/plugins.orig/authpdo/_test/mysql/wordpress.sql
 opt/app/dokuwiki/lib/plugins.orig/authpdo/_test/pgsql
@@ -3487,6 +3485,8 @@ opt/app/dokuwiki/lib/plugins.orig/authpgsql/lang/lv
 opt/app/dokuwiki/lib/plugins.orig/authpgsql/lang/lv/settings.php
 opt/app/dokuwiki/lib/plugins.orig/authpgsql/lang/nl
 opt/app/dokuwiki/lib/plugins.orig/authpgsql/lang/nl/settings.php
+opt/app/dokuwiki/lib/plugins.orig/authpgsql/lang/no
+opt/app/dokuwiki/lib/plugins.orig/authpgsql/lang/no/settings.php
 opt/app/dokuwiki/lib/plugins.orig/authpgsql/lang/pl
 opt/app/dokuwiki/lib/plugins.orig/authpgsql/lang/pl/settings.php
 opt/app/dokuwiki/lib/plugins.orig/authpgsql/lang/pt
@@ -3649,6 +3649,7 @@ opt/app/dokuwiki/lib/plugins.orig/config/_test/data
 opt/app/dokuwiki/lib/plugins.orig/config/_test/data/config.php
 opt/app/dokuwiki/lib/plugins.orig/config/_test/data/metadata.php
 opt/app/dokuwiki/lib/plugins.orig/config/admin.php
+opt/app/dokuwiki/lib/plugins.orig/config/admin.svg
 opt/app/dokuwiki/lib/plugins.orig/config/images
 opt/app/dokuwiki/lib/plugins.orig/config/images/danger.png
 opt/app/dokuwiki/lib/plugins.orig/config/images/security.png
@@ -3857,6 +3858,7 @@ opt/app/dokuwiki/lib/plugins.orig/extension/_test/testdata/tplsub6/tplfoo6
 opt/app/dokuwiki/lib/plugins.orig/extension/_test/testdata/tplsub6/tplfoo6/template.info.txt
 opt/app/dokuwiki/lib/plugins.orig/extension/action.php
 opt/app/dokuwiki/lib/plugins.orig/extension/admin.php
+opt/app/dokuwiki/lib/plugins.orig/extension/admin.svg
 opt/app/dokuwiki/lib/plugins.orig/extension/all.less
 opt/app/dokuwiki/lib/plugins.orig/extension/helper
 opt/app/dokuwiki/lib/plugins.orig/extension/helper/extension.php
@@ -3902,6 +3904,10 @@ opt/app/dokuwiki/lib/plugins.orig/extension/lang/da/intro_plugins.txt
 opt/app/dokuwiki/lib/plugins.orig/extension/lang/da/intro_templates.txt
 opt/app/dokuwiki/lib/plugins.orig/extension/lang/da/lang.php
 opt/app/dokuwiki/lib/plugins.orig/extension/lang/de
+opt/app/dokuwiki/lib/plugins.orig/extension/lang/de-informal
+opt/app/dokuwiki/lib/plugins.orig/extension/lang/de-informal/intro_install.txt
+opt/app/dokuwiki/lib/plugins.orig/extension/lang/de-informal/intro_plugins.txt
+opt/app/dokuwiki/lib/plugins.orig/extension/lang/de-informal/intro_search.txt
 opt/app/dokuwiki/lib/plugins.orig/extension/lang/de/intro_install.txt
 opt/app/dokuwiki/lib/plugins.orig/extension/lang/de/intro_plugins.txt
 opt/app/dokuwiki/lib/plugins.orig/extension/lang/de/intro_search.txt
@@ -3978,6 +3984,12 @@ opt/app/dokuwiki/lib/plugins.orig/extension/lang/nl/intro_plugins.txt
 opt/app/dokuwiki/lib/plugins.orig/extension/lang/nl/intro_search.txt
 opt/app/dokuwiki/lib/plugins.orig/extension/lang/nl/intro_templates.txt
 opt/app/dokuwiki/lib/plugins.orig/extension/lang/nl/lang.php
+opt/app/dokuwiki/lib/plugins.orig/extension/lang/no
+opt/app/dokuwiki/lib/plugins.orig/extension/lang/no/intro_install.txt
+opt/app/dokuwiki/lib/plugins.orig/extension/lang/no/intro_plugins.txt
+opt/app/dokuwiki/lib/plugins.orig/extension/lang/no/intro_search.txt
+opt/app/dokuwiki/lib/plugins.orig/extension/lang/no/intro_templates.txt
+opt/app/dokuwiki/lib/plugins.orig/extension/lang/no/lang.php
 opt/app/dokuwiki/lib/plugins.orig/extension/lang/pl
 opt/app/dokuwiki/lib/plugins.orig/extension/lang/pl/lang.php
 opt/app/dokuwiki/lib/plugins.orig/extension/lang/pt
@@ -4022,6 +4034,7 @@ opt/app/dokuwiki/lib/plugins.orig/info/syntax.php
 opt/app/dokuwiki/lib/plugins.orig/popularity
 opt/app/dokuwiki/lib/plugins.orig/popularity/action.php
 opt/app/dokuwiki/lib/plugins.orig/popularity/admin.php
+opt/app/dokuwiki/lib/plugins.orig/popularity/admin.svg
 opt/app/dokuwiki/lib/plugins.orig/popularity/helper.php
 opt/app/dokuwiki/lib/plugins.orig/popularity/lang
 opt/app/dokuwiki/lib/plugins.orig/popularity/lang/af
@@ -4211,6 +4224,7 @@ opt/app/dokuwiki/lib/plugins.orig/popularity/plugin.info.txt
 opt/app/dokuwiki/lib/plugins.orig/remote.php
 opt/app/dokuwiki/lib/plugins.orig/revert
 opt/app/dokuwiki/lib/plugins.orig/revert/admin.php
+opt/app/dokuwiki/lib/plugins.orig/revert/admin.svg
 opt/app/dokuwiki/lib/plugins.orig/revert/lang
 opt/app/dokuwiki/lib/plugins.orig/revert/lang/ar
 opt/app/dokuwiki/lib/plugins.orig/revert/lang/ar/intro.txt
@@ -4370,6 +4384,7 @@ opt/app/dokuwiki/lib/plugins.orig/styling/_test
 opt/app/dokuwiki/lib/plugins.orig/styling/_test/general.test.php
 opt/app/dokuwiki/lib/plugins.orig/styling/action.php
 opt/app/dokuwiki/lib/plugins.orig/styling/admin.php
+opt/app/dokuwiki/lib/plugins.orig/styling/admin.svg
 opt/app/dokuwiki/lib/plugins.orig/styling/iris.js
 opt/app/dokuwiki/lib/plugins.orig/styling/lang
 opt/app/dokuwiki/lib/plugins.orig/styling/lang/bg
@@ -4413,6 +4428,9 @@ opt/app/dokuwiki/lib/plugins.orig/styling/lang/ko/lang.php
 opt/app/dokuwiki/lib/plugins.orig/styling/lang/nl
 opt/app/dokuwiki/lib/plugins.orig/styling/lang/nl/intro.txt
 opt/app/dokuwiki/lib/plugins.orig/styling/lang/nl/lang.php
+opt/app/dokuwiki/lib/plugins.orig/styling/lang/no
+opt/app/dokuwiki/lib/plugins.orig/styling/lang/no/intro.txt
+opt/app/dokuwiki/lib/plugins.orig/styling/lang/no/lang.php
 opt/app/dokuwiki/lib/plugins.orig/styling/lang/pt
 opt/app/dokuwiki/lib/plugins.orig/styling/lang/pt-br
 opt/app/dokuwiki/lib/plugins.orig/styling/lang/pt-br/intro.txt
@@ -4445,6 +4463,7 @@ opt/app/dokuwiki/lib/plugins.orig/usermanager/_test/csv_export.test.php
 opt/app/dokuwiki/lib/plugins.orig/usermanager/_test/csv_import.test.php
 opt/app/dokuwiki/lib/plugins.orig/usermanager/_test/mocks.class.php
 opt/app/dokuwiki/lib/plugins.orig/usermanager/admin.php
+opt/app/dokuwiki/lib/plugins.orig/usermanager/admin.svg
 opt/app/dokuwiki/lib/plugins.orig/usermanager/images
 opt/app/dokuwiki/lib/plugins.orig/usermanager/images/search.png
 opt/app/dokuwiki/lib/plugins.orig/usermanager/lang
@@ -4711,6 +4730,7 @@ opt/app/dokuwiki/lib/plugins.orig/usermanager/lang/no
 opt/app/dokuwiki/lib/plugins.orig/usermanager/lang/no/add.txt
 opt/app/dokuwiki/lib/plugins.orig/usermanager/lang/no/delete.txt
 opt/app/dokuwiki/lib/plugins.orig/usermanager/lang/no/edit.txt
+opt/app/dokuwiki/lib/plugins.orig/usermanager/lang/no/import.txt
 opt/app/dokuwiki/lib/plugins.orig/usermanager/lang/no/intro.txt
 opt/app/dokuwiki/lib/plugins.orig/usermanager/lang/no/lang.php
 opt/app/dokuwiki/lib/plugins.orig/usermanager/lang/no/list.txt
@@ -4842,12 +4862,9 @@ opt/app/dokuwiki/lib/scripts/hotkeys.js
 opt/app/dokuwiki/lib/scripts/index.html
 opt/app/dokuwiki/lib/scripts/index.js
 opt/app/dokuwiki/lib/scripts/jquery
-opt/app/dokuwiki/lib/scripts/jquery/jquery-migrate.js
 opt/app/dokuwiki/lib/scripts/jquery/jquery-migrate.min.js
 opt/app/dokuwiki/lib/scripts/jquery/jquery-ui-theme
 opt/app/dokuwiki/lib/scripts/jquery/jquery-ui-theme/images
-opt/app/dokuwiki/lib/scripts/jquery/jquery-ui-theme/images/ui-bg_flat_0_aaaaaa_40x100.png
-opt/app/dokuwiki/lib/scripts/jquery/jquery-ui-theme/images/ui-bg_flat_75_ffffff_40x100.png
 opt/app/dokuwiki/lib/scripts/jquery/jquery-ui-theme/images/ui-bg_glass_55_fbf9ee_1x400.png
 opt/app/dokuwiki/lib/scripts/jquery/jquery-ui-theme/images/ui-bg_glass_65_ffffff_1x400.png
 opt/app/dokuwiki/lib/scripts/jquery/jquery-ui-theme/images/ui-bg_glass_75_dadada_1x400.png
@@ -4860,12 +4877,11 @@ opt/app/dokuwiki/lib/scripts/jquery/jquery-ui-theme/images/ui-icons_454545_256x2
 opt/app/dokuwiki/lib/scripts/jquery/jquery-ui-theme/images/ui-icons_888888_256x240.png
 opt/app/dokuwiki/lib/scripts/jquery/jquery-ui-theme/images/ui-icons_cd0a0a_256x240.png
 opt/app/dokuwiki/lib/scripts/jquery/jquery-ui-theme/smoothness.css
-opt/app/dokuwiki/lib/scripts/jquery/jquery-ui.js
 opt/app/dokuwiki/lib/scripts/jquery/jquery-ui.min.js
 opt/app/dokuwiki/lib/scripts/jquery/jquery.cookie.js
-opt/app/dokuwiki/lib/scripts/jquery/jquery.js
 opt/app/dokuwiki/lib/scripts/jquery/jquery.min.js
 opt/app/dokuwiki/lib/scripts/jquery/update.sh
+opt/app/dokuwiki/lib/scripts/jquery/versions
 opt/app/dokuwiki/lib/scripts/linkwiz.js
 opt/app/dokuwiki/lib/scripts/locktimer.js
 opt/app/dokuwiki/lib/scripts/media.js
@@ -4886,7 +4902,7 @@ opt/app/dokuwiki/lib/tpl
 opt/app/dokuwiki/lib/tpl.orig
 opt/app/dokuwiki/lib/tpl.orig/dokuwiki
 opt/app/dokuwiki/lib/tpl.orig/dokuwiki/css
-opt/app/dokuwiki/lib/tpl.orig/dokuwiki/css/_admin.css
+opt/app/dokuwiki/lib/tpl.orig/dokuwiki/css/_admin.less
 opt/app/dokuwiki/lib/tpl.orig/dokuwiki/css/_diff.css
 opt/app/dokuwiki/lib/tpl.orig/dokuwiki/css/_edit.css
 opt/app/dokuwiki/lib/tpl.orig/dokuwiki/css/_fileuploader.css
@@ -4986,6 +5002,9 @@ opt/app/dokuwiki/lib/tpl.orig/dokuwiki/lang/ko/style.txt
 opt/app/dokuwiki/lib/tpl.orig/dokuwiki/lang/nl
 opt/app/dokuwiki/lib/tpl.orig/dokuwiki/lang/nl/lang.php
 opt/app/dokuwiki/lib/tpl.orig/dokuwiki/lang/nl/style.txt
+opt/app/dokuwiki/lib/tpl.orig/dokuwiki/lang/no
+opt/app/dokuwiki/lib/tpl.orig/dokuwiki/lang/no/lang.php
+opt/app/dokuwiki/lib/tpl.orig/dokuwiki/lang/no/style.txt
 opt/app/dokuwiki/lib/tpl.orig/dokuwiki/lang/pt-br
 opt/app/dokuwiki/lib/tpl.orig/dokuwiki/lang/pt-br/lang.php
 opt/app/dokuwiki/lib/tpl.orig/dokuwiki/lang/pt-br/style.txt
@@ -5012,6 +5031,7 @@ opt/app/dokuwiki/vendor/composer
 opt/app/dokuwiki/vendor/composer/ClassLoader.php
 opt/app/dokuwiki/vendor/composer/LICENSE
 opt/app/dokuwiki/vendor/composer/autoload_classmap.php
+opt/app/dokuwiki/vendor/composer/autoload_files.php
 opt/app/dokuwiki/vendor/composer/autoload_namespaces.php
 opt/app/dokuwiki/vendor/composer/autoload_psr4.php
 opt/app/dokuwiki/vendor/composer/autoload_real.php
@@ -5262,6 +5282,13 @@ opt/app/dokuwiki/vendor/easybook/geshi/geshi/xpp.php
 opt/app/dokuwiki/vendor/easybook/geshi/geshi/yaml.php
 opt/app/dokuwiki/vendor/easybook/geshi/geshi/z80.php
 opt/app/dokuwiki/vendor/easybook/geshi/geshi/zxbasic.php
+opt/app/dokuwiki/vendor/paragonie/random_compat/lib/byte_safe_strings.php
+opt/app/dokuwiki/vendor/paragonie/random_compat/lib/cast_to_int.php
+opt/app/dokuwiki/vendor/paragonie/random_compat/lib/error_polyfill.php
+opt/app/dokuwiki/vendor/paragonie/random_compat/lib/random.php
+opt/app/dokuwiki/vendor/paragonie/random_compat/lib/random_bytes_dev_urandom.php
+opt/app/dokuwiki/vendor/paragonie/random_compat/lib/random_int.php
+opt/app/dokuwiki/vendor/phpseclib/phpseclib/phpseclib/bootstrap.php
 opt/app/dokuwiki/vendor/splitbrain
 opt/app/dokuwiki/vendor/splitbrain/php-archive
 opt/app/dokuwiki/vendor/splitbrain/php-archive/.gitignore
